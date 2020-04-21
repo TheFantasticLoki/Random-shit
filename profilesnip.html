@@ -1,0 +1,13 @@
+					{{ if hasAdmin $global.Context.User.Privileges }}
+						{{ $admin := has .privileges 4096 }}
+							{{ if $admin  }}
+								<h1 class="ui header loki">
+									{{ .username }}
+								</h1>
+							{{ else }}
+								<h1 class="ui header">
+									{{ .username }}
+								</h1>
+							{{ end }}
+						{{ end }}
+					{{ end }}
